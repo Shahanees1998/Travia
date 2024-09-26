@@ -134,7 +134,7 @@ const HeaderComponent: React.FC<HeaderComponentProps> = ({ setActiveComponent, a
                 <a href="#" className="flex items-center mr-5"><img src="/images/logo/search.png" /></a>
                 <a href="#" className="flex items-center mr-5"><img src="/images/logo/user.png" /></a>
                 <a
-                  href="/login"
+                  href="/auth/login"
                   className="rounded-full bg-primary px-10 py-2 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark"
                 >
                   Login
