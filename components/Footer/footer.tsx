@@ -4,8 +4,7 @@ const FooterComponent = (): JSX.Element => {
   return (
     <footer
       className="wow fadeInUp relative z-10 bg-primary pt-20 lg:pt-[100px]"
-      data-wow-delay=".15s"
-    >
+      data-wow-delay=".15s" >
       <div className="container">
         <div className="flex">
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
