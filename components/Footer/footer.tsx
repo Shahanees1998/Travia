@@ -11,7 +11,7 @@ const FooterComponent = (): JSX.Element => {
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
             <div className="mb-10 w-full">
               <a
-                href="#"
+                href="/home"
                 className="mb-6 inline-block max-w-[160px]"
               >
                 <img

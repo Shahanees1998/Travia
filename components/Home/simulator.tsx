@@ -26,20 +26,20 @@ const Simulator: React.FC = () => {
             </div>
           </div>
           <div className="w-full lg:w-8/12 px-4">
-            <div className="bg-white px-6 py-8 rounded-lg mb-5">
-              <div className="flex flex-wrap justify-center items-center mb-7 sm:hidden">
+            <div className="bg-white px-6 py-8 rounded-lg mb-4">
+              <div className="flex flex-wrap justify-center items-center mb-4 sm:hidden">
                 <a href="#"><img className="mr-5" src="/images/hero/pre.png" alt="Previous" /></a>
                 <h2 className="text-black text-2xl text-center font-semibold mr-5">2024-09-07 - V75 Jägersro - ADV 1</h2>
                 <a href="#"><img src="/images/hero/next.png" alt="Next" /></a>
               </div>
-
+{/*
               <div className="hidden sm:flex justify-center items-center mb-7">
                 <div className="flex justify-center">
                   <a href="#"><img className="mr-5" src="/images/hero/pre.png" alt="Previous" /></a>
                   <a href="#"><img src="/images/hero/next.png" alt="Next" /></a>
                 </div>
                 <h2 className="text-black text-2xl text-center font-semibold mr-5">2024-09-07 - V75 Jägersro - ADV 1</h2>
-              </div>
+              </div> */}
 
               <div className="relative overflow-x-auto">
                 <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -52,10 +52,14 @@ const Simulator: React.FC = () => {
                       { name: '5 Forspärla', star: 0 },
                       { name: '6 Alfa Lina', star: 0 },
                       { name: '11 Hulte Annika', star: 0 },
-                      { name: '8 Ronja N.N', star: 0 }
+                      { name: '8 Ronja N.N', star: 0 },
+                      { name: '2 Alfie', star: 0 },
+                      { name: '10 Hulte Alva', star: 0 },
+                      { name: '12 Teknolina', star: 0 },
+                      { name: '7 Ragnhild W.M', star: 0 }
                     ].map((horse, index) => (
                       <tr key={index} className="bg-white dark:bg-gray-800 dark:border-gray-700">
-                        <th className="px-2 py-5 text-left font-normal">
+                        <th className="px-2 py-3 text-left font-normal">
                           {horse.name}
                         </th>
                         {['dark-blue', 'light-orange', 'green', 'red'].map((color, i) => (

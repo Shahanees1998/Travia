@@ -15,6 +15,8 @@ module.exports = {
     },
     extend: {
       colors: {
+        orange: '#FF5E00',
+        dropdown: '#E5E5E5',
         black: '#212b36',
         'dark-700': '#090e34b3',
         dark: {

@@ -26,7 +26,6 @@ const MainBody = (): JSX.Element => {
               <ul className="mb-10 flex flex-wrap items-center justify-center gap-5">
                 <li>
                   <a
-                    href="/our-tools"
                     className="inline-flex items-center justify-center rounded-full bg-primary px-10 py-[14px] text-center text-base font-semibold text-white shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color"
                   >
                     Our Tools

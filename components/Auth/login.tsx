@@ -1,3 +1,5 @@
+'use client'
+import Link from 'next/link'
 import React from 'react'
 
 const LoginComponent = (): JSX.Element => {
@@ -18,25 +20,25 @@ const LoginComponent = (): JSX.Element => {
           </div>
           <div className="w-full px-4 lg:w-1/2 flex justify-center">
             <div className="mb-12 max-w-[540px] lg:mb-0">
-              <img className="mx-auto" src="/images/hero/login-logo.png" alt="Login logo" />
-              <div className="px-2 py-2 bg-light rounded-full max-content mx-auto mt-12">
-                <button onClick={() => {}} className="inline-flex items-center justify-center rounded-full bg-primary px-10 py-3 text-center text-base font-medium text-white">
+              <img className="mx-auto" src="/images/hero/login-logo.png" alt="Login logo" style={{ height: '6rem' }}/>
+              <div className="px-2 py-2 bg-light rounded-full max-content mx-auto mt-8">
+                <Link href={'/auth/login'} className="inline-flex items-center justify-center rounded-full bg-primary px-10 py-2 text-center text-base font-medium text-white">
                   Login
-                </button>
-                <button onClick={() => {}} className="inline-flex items-center justify-center rounded-full bg-transparent px-10 py-3 text-center text-base font-medium text-black">
+                </Link>
+                <Link href={'/auth/signup'} className="inline-flex items-center justify-center rounded-full bg-transparent px-10 py-2 text-center text-base font-medium text-black">
                   Register
-                </button>
+                </Link>
               </div>
               <p className="text-base leading-relaxed text-body-color dark:text-dark-6 text-center text-sm mt-5 mb-5">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
               </p>
               <div className="mb-[22px] relative">
                 <label className="text-black text-sm font-medium">Email</label>
-                <input type="text" name="Email" placeholder="Enter your email" className="bg-white mt-1 w-full text-black dark:text-dark-6 placeholder:text-body-color border px-5 py-3 border-gray-7 dark:border-dark-3 rounded-full focus:border-primary focus:outline-none" />
+                <input type="text" name="Email" placeholder="Enter your email" className="bg-white mt-1 w-full text-black dark:text-dark-6 placeholder:text-body-color border px-5 py-2 border-gray-7 dark:border-dark-3 rounded-full focus:border-primary focus:outline-none" />
               </div>
               <div className="mb-[22px] relative">
                 <label className="text-black text-sm font-medium">Password</label>
-                <input type="password" name="Password" placeholder="***********" className="bg-white mt-1 w-full text-black dark:text-dark-6 placeholder:text-body-color border px-5 py-3 border-gray-7 dark:border-dark-3 rounded-full focus:border-primary focus:outline-none" />
+                <input type="password" name="Password" placeholder="***********" className="bg-white mt-1 w-full text-black dark:text-dark-6 placeholder:text-body-color border px-5 py-2 border-gray-7 dark:border-dark-3 rounded-full focus:border-primary focus:outline-none" />
                 <img className="absolute right-0 mr-5 eye" src="/images/hero/eye.png" alt="Toggle password visibility" />
               </div>
 
@@ -48,9 +50,9 @@ const LoginComponent = (): JSX.Element => {
                 <label className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 cursor-pointer">Forgot Password ?</label>
               </div>
 
-              <button onClick={() => {}} className="inline-flex w-full items-center mt-8 justify-center rounded-full bg-primary px-7 py-3 text-center text-base font-medium text-white hover:border-blue-dark hover:bg-blue-dark">
+              <Link href={'/home'} className="inline-flex w-full items-center mt-8 justify-center rounded-full bg-primary px-7 py-2 text-center text-base font-medium text-white hover:border-blue-dark hover:bg-blue-dark">
                 Login
-              </button>
+              </Link>
             </div>
           </div>
         </div>

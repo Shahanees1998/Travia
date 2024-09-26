@@ -10,7 +10,7 @@ import HeaderComponent from 'components/Header/header'
 import MainBody from './mainBody'
 
 const Home = (): JSX.Element => {
-  const [activeComponent, setActiveComponent] = useState('home')
+  const [activeComponent, setActiveComponent] = useState<string>('home')
 
   const renderComponent = (): JSX.Element => {
     switch (activeComponent) {
@@ -31,7 +31,7 @@ const Home = (): JSX.Element => {
 
   return (
     <>
-    <HeaderComponent setActiveComponent={setActiveComponent}/>
+    <HeaderComponent setActiveComponent={setActiveComponent} activeComponent={activeComponent}/>
     <div className="relative overflow-hidden pt-[120px] md:pt-[130px] lg:pt-[160px] landing-bg">
       <div className="container">
         <div className="-mx-4 flex flex-wrap items-center relative z-10">
