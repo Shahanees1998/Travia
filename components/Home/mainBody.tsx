@@ -28,7 +28,7 @@ const MainBody = (): JSX.Element => {
                   <a
                     className="inline-flex items-center justify-center rounded-full bg-primary px-10 py-[14px] text-center text-base font-semibold text-white shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color"
                   >
-                    Our Tools
+                    Våra verktyg
                   </a>
                 </li>
               </ul>

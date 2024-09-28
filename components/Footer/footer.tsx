@@ -15,7 +15,7 @@ const FooterComponent = (): JSX.Element => {
               >
                 <img
                   src="/images/logo/footer-logo.png"
-                  alt="logo"
+                  alt="logotyp"
                   className="max-w-full"
                 />
               </a>
@@ -24,10 +24,10 @@ const FooterComponent = (): JSX.Element => {
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
             <div className="mb-10 w-full flex justify-end">
               <ul>
-                <li><h4 className="mb-3 text-lg font-semibold text-white">Contact</h4></li>
+                <li><h4 className="mb-3 text-lg font-semibold text-white">Kontakt</h4></li>
                 <li>
                   <a href="mailto:info@travia.com" className="flex">
-                    <img src="/images/footer/mail.png" alt="Email icon" />
+                    <img src="/images/footer/mail.png" alt="E-postikon" />
                     <span className="ml-2 text-white">info@travia.com</span>
                   </a>
                 </li>
@@ -45,14 +45,14 @@ const FooterComponent = (): JSX.Element => {
             <div className="w-full px-4 md:w-1/3 lg:w-1/3">
               <div className="my-1 flex flex-start">
                 <p className="text-base text-white">
-                  © 2024 Travia. All rights reserved.
+                  © 2024 Travia. Alla rättigheter förbehållna.
                 </p>
               </div>
             </div>
             <div className="w-full px-4 md:w-1/3 lg:w-1/3">
               <div className="my-1 flex justify-center">
                 <p className="text-base text-white font-normal text-center mr-5">
-                  Terms & Conditions
+                  Villkor
                 </p>
                 <p className="text-base text-white font-normal text-center">
                   Cookies
@@ -61,9 +61,9 @@ const FooterComponent = (): JSX.Element => {
             </div>
             <div className="w-full px-4 md:w-1/3 lg:w-1/3">
               <div className="my-1 flex justify-end">
-                <a href="#" aria-label="LinkedIn"><img className="ml-2" src="/images/footer/Linkedin.png" alt="LinkedIn icon" /></a>
-                <a href="#" aria-label="Facebook"><img className="ml-2" src="/images/footer/Facebook (1).png" alt="Facebook icon" /></a>
-                <a href="#" aria-label="Twitter"><img className="ml-2" src="/images/footer/Twitter (1).png" alt="Twitter icon" /></a>
+                <a href="#" aria-label="LinkedIn"><img className="ml-2" src="/images/footer/Linkedin.png" alt="LinkedIn-ikon" /></a>
+                <a href="#" aria-label="Facebook"><img className="ml-2" src="/images/footer/Facebook (1).png" alt="Facebook-ikon" /></a>
+                <a href="#" aria-label="Twitter"><img className="ml-2" src="/images/footer/Twitter (1).png" alt="Twitter-ikon" /></a>
               </div>
             </div>
           </div>

@@ -7,10 +7,10 @@ const Coupan = (): JSX.Element => {
             id="home"
             className="relative overflow-hidden"
         >
-            <div className="container mx-auto px-4">
+            <div className="container md:mx-auto md:px-4">
                 <div className="items-center flex flex-wrap">
-                    <div className="w-full lg:w-12/12 px-4">
-                        <div className="bg-light px-8 py-8 rounded-lg mb-5">
+                    <div className="w-full lg:w-12/12 md:px-4">
+                        <div className="bg-light px-2 md:px-8 py-8 rounded-lg mb-5">
                             <h1 className="text-black text-2xl text-center font-semibold">KUPONGSGENERATORN</h1>
                             <div className="items-center flex flex-wrap">
                                 <div className="w-full lg:w-4/12 px-4 mt-12">
@@ -38,7 +38,7 @@ const Coupan = (): JSX.Element => {
                                     <button
                                         className="rounded-full sm-hold w-full mt-20 bg-primary px-10 py-5 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark"
                                     >
-                                        Generate
+                                        Generera
                                     </button>
                                 </div>
                                 <div className="w-full lg:w-8/12 px-4 mt-12">

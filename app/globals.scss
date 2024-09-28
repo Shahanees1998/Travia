@@ -3228,9 +3228,13 @@ body {
 {
   width: max-content;
 }
+.bgyellow {
+  background-color: #FF5E00 !important;
+  color: white !important;
+}
 .eye
 {
-  margin-top: -33px;
+  margin-top: -26px;
 }
 .login-img-text
 {
@@ -3244,6 +3248,10 @@ body {
   .flex-start
   {
     justify-content: center !important;
+  }
+  .mobile-navbar {
+    height: 100vh;
+    border-radius: 0;
   }
   .landing-bg
   {
