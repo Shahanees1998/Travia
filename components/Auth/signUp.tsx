@@ -31,6 +31,7 @@ const SignUpComponent = (): JSX.Element => {
                                 </Link>
                             </div>
                             <p className="text-base leading-relaxed text-body-color dark:text-dark-6 text-center text-sm mt-5 mb-5">
+
                             </p>
                             <div className="mb-2 relative">
                                 <label className="text-black text-sm font-medium">Fullständigt namn</label>
