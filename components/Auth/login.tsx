@@ -30,7 +30,6 @@ const LoginComponent = (): JSX.Element => {
                 </Link>
               </div>
               <p className="text-base leading-relaxed text-body-color dark:text-dark-6 text-center text-sm mt-5 mb-5">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
               </p>
               <div className="mb-[22px] relative">
                 <label className="text-black text-sm font-medium">E-post</label>
