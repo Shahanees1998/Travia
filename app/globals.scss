@@ -3242,7 +3242,43 @@ body {
   left: 7rem;
 }
 
+// .track {
+//   background-color: #E5E7EB;
+//     height: 1rem;
+// }
 
+// .numBox {
+//   margin-top: 0.1rem;
+// }
+
+.p-slider-range {
+  background-color: #FF5E00 !important;
+}
+
+.p-slider:not(.p-disabled) .p-slider-handle:hover {
+  background-color: white !important;
+}
+
+.p-slider .p-slider-handle:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.2rem #FF5E00;
+}
+
+.sticky {
+  box-shadow: none !important
+}
+
+.p-slider .p-slider-handle {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.2rem #FF5E00;
+  height: 1.143rem;
+  width: 1.143rem;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
 
 @media (max-width: 600px){
   .flex-start

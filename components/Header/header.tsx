@@ -102,7 +102,7 @@ const HeaderComponent: React.FC<HeaderComponentProps> = ({ setActiveComponent, a
       </nav>}
 
       <header
-        className="ud-header absolute left-0 top-0 z-40 flex w-full items-center bg-white"
+        className="ud-header sticky border-b border-stroke left-0 top-0 z-40 flex w-full items-center bg-white"
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
@@ -202,8 +202,7 @@ const HeaderComponent: React.FC<HeaderComponentProps> = ({ setActiveComponent, a
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <div className="hidden sm:flex">
-                  <a href="#" className="flex items-center mr-5"><img src="/images/logo/search.png" /></a>
-                  <a href="#" className="flex items-center mr-5"><img src="/images/logo/user.png" /></a>
+                  <a className="flex items-center mr-5"><img src="/images/logo/user.png" /></a>
                   <a
                     href="/auth/login"
                     className="rounded-full bg-primary px-10 py-2 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark"

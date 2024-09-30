@@ -1,6 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Simulator: React.FC = () => {
+const Simulator: React.FC = (): JSX.Element => {
+  const events: string[] = [
+    '2024-09-07 - V75 Jägersro - ADV 1',
+    '2024-09-14 - V75 Solvalla - ADV 2',
+    '2024-09-21 - V75 Åby - ADV 3',
+    '2024-09-28 - V75 Mantorp - ADV 4'
+  ]
+
+  const [currentEventIndex, setCurrentEventIndex] = useState<number>(0)
+
+  const handlePrevious = (): void => {
+    setCurrentEventIndex((prevIndex) =>
+      prevIndex > 0 ? prevIndex - 1 : events.length - 1
+    )
+  }
+
+  const handleNext = (): void => {
+    setCurrentEventIndex((prevIndex) =>
+      prevIndex < events.length - 1 ? prevIndex + 1 : 0
+    )
+  }
+
   return (
     <div
       id="home"
@@ -28,19 +49,10 @@ const Simulator: React.FC = () => {
           <div className="w-full lg:w-8/12 px-4">
             <div className="bg-white px-6 py-8 rounded-lg mb-4">
               <div className="flex flex-wrap justify-center items-center mb-4 sm:hidden">
-                <a href="#"><img className="mr-5" src="/images/hero/pre.png" alt="Previous" /></a>
-                <h2 className="text-black text-2xl text-center font-semibold mr-5">2024-09-07 - V75 Jägersro - ADV 1</h2>
-                <a href="#"><img src="/images/hero/next.png" alt="Next" /></a>
+                <button onClick={handlePrevious}><img className="mr-5" src="/images/hero/pre.png" alt="Previous" /></button>
+                <h2 className="text-black text-2xl text-center font-semibold mr-5">{events[currentEventIndex]}</h2>
+                <button onClick={handleNext}><img src="/images/hero/next.png" alt="Next" /></button>
               </div>
-{/*
-              <div className="hidden sm:flex justify-center items-center mb-7">
-                <div className="flex justify-center">
-                  <a href="#"><img className="mr-5" src="/images/hero/pre.png" alt="Previous" /></a>
-                  <a href="#"><img src="/images/hero/next.png" alt="Next" /></a>
-                </div>
-                <h2 className="text-black text-2xl text-center font-semibold mr-5">2024-09-07 - V75 Jägersro - ADV 1</h2>
-              </div> */}
-
               <div className="relative overflow-x-auto">
                 <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                   <tbody>

@@ -1,7 +1,13 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
+import { Slider, type SliderChangeEvent } from 'primereact/slider'
+import 'primereact/resources/themes/lara-light-indigo/theme.css'
+import 'primereact/resources/primereact.min.css'
 
 const Coupan = (): JSX.Element => {
+  const [antalSpikar, setAntalSpikar] = useState<number>(2)
+  const [skrallvred, setSkrallvred] = useState<number>(2)
+
   return (
         <div
             id="home"
@@ -26,14 +32,31 @@ const Coupan = (): JSX.Element => {
                                         <span className="absolute right-0 mr-5 kp-mt">KP</span>
                                     </div>
                                     <div className="mb-[50px] relative">
-                                        <label className="text-black text-md mb-3">Antal spikar</label>
-                                        <div className="w-full input-bg rounded-full py-2 kp-mt"></div>
-                                        <div className="bg-primary numberBox rounded-full flex justify-center items-center text-white font-semibold absolute numberPosition">2</div>
+                                        <label className="text-black text-md mb-3" style={{ marginBottom: '2rem' }}>Antal spikar</label>
+                                        <div className="flex items-center" style={{ marginTop: '1rem' }}>
+                                            <Slider
+                                                value={antalSpikar}
+                                                onChange={(e: SliderChangeEvent) => { setAntalSpikar(e.value as number) }}
+                                                min={0}
+                                                max={7}
+                                                step={0.1}
+                                                className="w-full mr-4"
+                                            />
+                                        </div>
                                     </div>
                                     <div className="mb-[50px] relative">
                                         <label className="text-black text-md mb-3">Skrällvred</label>
-                                        <div className="w-full input-bg rounded-full py-2 kp-mt"></div>
-                                        <div className="bg-primary numberBox rounded-full flex justify-center items-center text-white font-semibold absolute numberPosition">2</div>
+                                        <div className="flex items-center" style={{ marginTop: '1rem' }}>
+
+                                            <Slider
+                                                value={skrallvred}
+                                                onChange={(e: SliderChangeEvent) => { setSkrallvred(e.value as number) }}
+                                                min={0}
+                                                max={7}
+                                                step={0.1}
+                                                className="w-full mr-4"
+                                            />
+                                        </div>
                                     </div>
                                     <button
                                         className="rounded-full sm-hold w-full mt-20 bg-primary px-10 py-5 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark"
