@@ -6,7 +6,6 @@ import 'primeicons/primeicons.css'
 import '../globals.scss'
 import '../globals-public.css'
 import '../data-tables-css.css'
-import FooterComponent from 'components/Footer/footer'
 
 export const metadata: Metadata = {
   title: 'Jaggasar',
@@ -42,7 +41,6 @@ export default async function RootLayout ({
             </Head>
             <body className={'h-full bg-gray-2'}>
                 {children}
-                <FooterComponent />
             </body>
         </html>
   )

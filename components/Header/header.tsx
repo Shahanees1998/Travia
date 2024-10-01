@@ -84,7 +84,6 @@ const HeaderComponent: React.FC<HeaderComponentProps> = ({ setActiveComponent, a
           </li>
           <li className="group relative">
             <button
-              onClick={() => { setActiveComponent('about'); openMenu(false) }}
               className={`ud-menu-scroll flex py-2 text-xl ${activeComponent === 'about' ? 'text-primary font-semibold' : 'text-black'} dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6`}
             >
               OM OSS

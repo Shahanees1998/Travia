@@ -1,6 +1,11 @@
+'use client'
 import React from 'react'
 
-const FooterComponent = (): JSX.Element => {
+interface FooterComponentProps {
+  setActiveComponent: (component: string) => void
+}
+
+const FooterComponent: React.FC<FooterComponentProps> = ({ setActiveComponent }): JSX.Element => {
   return (
     <footer
       className="wow fadeInUp relative pt-8 z-10 bg-primary "
@@ -57,6 +62,9 @@ const FooterComponent = (): JSX.Element => {
                 </p>
                 <p className="text-base text-white font-normal text-center">
                   Cookies
+                </p>
+                <p className="text-base text-white font-normal text-center cursor-pointer" onClick={() => { setActiveComponent('subscription') }}>
+                  Prenumeration
                 </p>
               </div>
             </div>
