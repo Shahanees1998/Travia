@@ -8,6 +8,7 @@ import Coupan from './coupan'
 import About from './about'
 import HeaderComponent from 'components/Header/header'
 import MainBody from './mainBody'
+import FooterComponent from 'components/Footer/footer'
 
 const Home = (): JSX.Element => {
   const [activeComponent, setActiveComponent] = useState<string>('home')
@@ -41,6 +42,7 @@ const Home = (): JSX.Element => {
         </div>
       </div>
     </div>
+    <FooterComponent setActiveComponent={setActiveComponent}/>
     </>
   )
 }
