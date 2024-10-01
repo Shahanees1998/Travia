@@ -60,10 +60,10 @@ const FooterComponent: React.FC<FooterComponentProps> = ({ setActiveComponent })
                 <p className="text-base text-white font-normal text-center mr-5">
                   Villkor
                 </p>
-                <p className="text-base text-white font-normal text-center">
+                <p className="text-base text-white font-normal mr-5 text-center">
                   Cookies
                 </p>
-                <p className="text-base text-white font-normal text-center cursor-pointer" onClick={() => { setActiveComponent('subscription') }}>
+                <p className="text-base text-white font-normal text-center cursor-pointer" onClick={() => { setActiveComponent('about') }}>
                   Prenumeration
                 </p>
               </div>

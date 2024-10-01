@@ -84,7 +84,7 @@ const HeaderComponent: React.FC<HeaderComponentProps> = ({ setActiveComponent, a
           </li>
           <li className="group relative">
             <button
-              className={`ud-menu-scroll flex py-2 text-xl ${activeComponent === 'about' ? 'text-primary font-semibold' : 'text-black'} dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6`}
+              className={'ud-menu-scroll flex py-2 text-xl text-black dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6'}
             >
               OM OSS
             </button>
@@ -189,8 +189,7 @@ const HeaderComponent: React.FC<HeaderComponentProps> = ({ setActiveComponent, a
                     </li>
                     <li className="group relative">
                       <button
-                        onClick={() => { setActiveComponent('about') }}
-                        className={`ud-menu-scroll flex py-2 text-base ${activeComponent === 'about' ? 'text-primary font-semibold' : 'text-black'} dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6`}
+                        className={'ud-menu-scroll flex py-2 text-base text-black dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6'}
                       >
                         OM OSS
                       </button>
