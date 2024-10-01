@@ -3073,6 +3073,11 @@ body {
   box-shadow: none !important;
 }
 
+.curve {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
 .p-slider .p-slider-handle {
   outline: 0 none;
   outline-offset: 0;

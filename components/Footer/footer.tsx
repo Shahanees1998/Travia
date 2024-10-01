@@ -3,15 +3,16 @@ import React from 'react'
 const FooterComponent = (): JSX.Element => {
   return (
     <footer
-      className="wow fadeInUp relative z-10 bg-primary pt-20 lg:pt-[100px]"
+      className="wow fadeInUp relative pt-8 z-10 bg-primary "
+      style={{ paddingTop: '1rem' }}
       data-wow-delay=".15s" >
       <div className="container">
         <div className="flex">
-          <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
-            <div className="mb-10 w-full">
+          <div className="w-full  px-4 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
+            <div className="w-full">
               <a
                 href="/home"
-                className="mb-6 inline-block max-w-[160px]"
+                className="inline-block max-w-[160px]"
               >
                 <img
                   src="/images/logo/footer-logo.png"

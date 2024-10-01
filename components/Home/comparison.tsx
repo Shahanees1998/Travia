@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Comparison = async (): Promise<JSX.Element> => {
+const Comparison = (): JSX.Element => {
   return (
     <div
       id="home"
-      className="relative overflow-hiddeng"
+      className="relative"
     >
       <div className="container mx-auto px-4">
         <div className="items-center flex flex-wrap mb-10">

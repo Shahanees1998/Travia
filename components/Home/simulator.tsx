@@ -75,7 +75,7 @@ const Simulator: React.FC = (): JSX.Element => {
                 {regions.map((region, index) => (
                   <div key={index} className="flex items-center mb-5">
                     <div className="w-1/4 text-right pr-2 whitespace-nowrap overflow-hidden" style={{ minWidth: '200px' }}>{region.name}</div>
-                    <div className="w-full flex">
+                    <div className="w-full curve flex">
                       {region.values.map((value, i) => (
                         <div
                           key={i}
