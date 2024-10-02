@@ -1,4 +1,4 @@
-// File: /home/anees/Documents/travia/app/(app)/layout.tsx
+// File: /home/anees/Documents/travia (Copy)/app/(app)/layout.tsx
 import * as entry from '../../../../app/(app)/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
