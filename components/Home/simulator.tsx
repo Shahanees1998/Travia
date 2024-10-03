@@ -9,6 +9,15 @@ const Simulator: React.FC = (): JSX.Element => {
   ]
 
   const [currentEventIndex, setCurrentEventIndex] = useState<number>(0)
+  const [activeButton, setActiveButton] = useState<number | null>(null)
+  const buttonData = [
+    { text: 'Hästens form' },
+    { text: 'Kuskens form' },
+    { text: 'Tränarens form' },
+    { text: 'Hastighet' },
+    { text: 'Distans' },
+    { text: 'Spår' }
+  ]
 
   const handlePrevious = (): void => {
     setCurrentEventIndex((prevIndex) =>
@@ -22,6 +31,10 @@ const Simulator: React.FC = (): JSX.Element => {
     )
   }
 
+  const handleButtonClick = (index: number): void => {
+    setActiveButton(activeButton === index ? null : index)
+  }
+
   const regions = [
     { name: 'Region Kalmar län', values: [53, 21, 26] },
     { name: 'Region Jönköpings län', values: [51, 25, 24] },
@@ -31,10 +44,10 @@ const Simulator: React.FC = (): JSX.Element => {
     { name: 'Region Dalarna', values: [47, 23, 30] },
     { name: 'Region Kronoberg', values: [46, 25, 29] },
     { name: 'Region Västmanland', values: [45, 27, 28] },
-    { name: 'Region Srmland', values: [45, 25, 31] },
-    { name: 'Region Gävleborg', values: [45, 27, 28] },
-    { name: 'Region Östergötland', values: [45, 25, 31] },
-    { name: 'Region Värmland', values: [44, 24, 32] }
+    { name: 'Region Srmland', values: [45, 25, 31] }
+    // { name: 'Region Gävleborg', values: [45, 27, 28] },
+    // { name: 'Region Östergötland', values: [45, 25, 31] },
+    // { name: 'Region Värmland', values: [44, 24, 32] }
   ]
 
   return (
@@ -45,19 +58,20 @@ const Simulator: React.FC = (): JSX.Element => {
       <div className="container mx-auto px-4">
         <div className="items-stretch flex flex-wrap"> {/* Changed from items-start to items-stretch */}
           <div className="w-full lg:w-4/12 px-4 mb-4 lg:mb-0"> {/* Added mb-4 lg:mb-0 */}
-            <div className="bg-white px-8 py-8 rounded-lg h-full flex flex-col"> {/* Added h-full flex flex-col */}
-              <h4 className="text-black text-xl text-center font-semibold">Parameters</h4>
+            <div className="bg-white py-8 rounded-lg h-full flex flex-col"> {/* Added h-full flex flex-col */}
+              <h4 className="text-black text-xl text-center font-semibold">Parametrar</h4>
               <p className="text-gray-7 mb-10 text-md text-center font-normal">
                 Baserad på de <br />senaste 2 mån
               </p>
               <div className="flex-grow flex flex-col justify-between"> {/* Added flex-grow flex flex-col justify-between */}
-                {['Hästens form', 'Kuskens form', 'Tränarens form', 'Hastighet', 'Distans', 'Spår'].map((text, index) => (
+                {buttonData.map((button, index) => (
                   <button
                     key={index}
                     type="button"
-                    className={`bg-${['dark-blue', 'light-orange', 'green', 'red', 'purple', 'light-blue'][index]} mb-${index === 5 ? '0' : '8'} w-full rounded-full px-5 py-3 mt-2 text-white font-semibold`}
+                    onClick={() => { handleButtonClick(index) }}
+                    className={`${activeButton === index ? 'bgprm' : 'bg-gray-200'} mb-2 w-full px-5 py-3 text-${activeButton === index ? 'white' : 'black'} font-semibold transition-colors duration-300`}
                   >
-                    {text}
+                    {button.text}
                   </button>
                 ))}
               </div>

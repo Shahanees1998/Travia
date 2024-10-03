@@ -29,7 +29,7 @@ const Coupan = (): JSX.Element => {
                                             placeholder="0.00"
                                             className="input-bg rounded-full w-full text-body-color dark:text-dark-6 placeholder:text-body-color/60 border px-5 py-3 border-[#FF5E00] dark:border-dark-3 focus:border-primary focus:outline-none"
                                         />
-                                        <span className="absolute right-0 mr-5 kp-mt">KP</span>
+                                        <span className="absolute right-0 mr-5 kp-mt">KR</span>
                                     </div>
                                     <div className="mb-[50px] relative">
                                         <label className="text-black text-md mb-3" style={{ marginBottom: '2rem' }}>Antal spikar</label>
