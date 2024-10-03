@@ -9,7 +9,7 @@ const Simulator: React.FC = (): JSX.Element => {
   ]
 
   const [currentEventIndex, setCurrentEventIndex] = useState<number>(0)
-  const [activeButton, setActiveButton] = useState<number | null>(null)
+  const [selectedButtons, setSelectedButtons] = useState<number[]>([])
   const buttonData = [
     { text: 'Hästens form' },
     { text: 'Kuskens form' },
@@ -32,7 +32,11 @@ const Simulator: React.FC = (): JSX.Element => {
   }
 
   const handleButtonClick = (index: number): void => {
-    setActiveButton(activeButton === index ? null : index)
+    setSelectedButtons(prevSelected =>
+      prevSelected.includes(index)
+        ? prevSelected.filter(i => i !== index)
+        : [...prevSelected, index]
+    )
   }
 
   const regions = [
@@ -69,7 +73,13 @@ const Simulator: React.FC = (): JSX.Element => {
                     key={index}
                     type="button"
                     onClick={() => { handleButtonClick(index) }}
-                    className={`${activeButton === index ? 'bgprm' : 'bg-gray-200'} mb-2 w-full px-5 py-3 text-${activeButton === index ? 'white' : 'black'} font-semibold transition-colors duration-300`}
+                    className={`${
+                      selectedButtons.includes(index)
+                        ? ['bg-dark-blue', 'bg-light-orange', 'bg-green', 'bg-red', 'bg-purple', 'bg-light-blue'][index]
+                        : 'bg-gray-200'
+                    } mb-2 w-full px-5 py-3 text-${
+                      selectedButtons.includes(index) ? 'white' : 'black'
+                    } font-semibold transition-colors duration-300`}
                   >
                     {button.text}
                   </button>
